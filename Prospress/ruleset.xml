@@ -78,7 +78,17 @@
 	<rule ref="WordPress.WhiteSpace.CastStructureSpacing"/>
 	<rule ref="WordPress.PHP.YodaConditions"/>
 
-	<rule ref="WordPress.XSS.EscapeOutput"/>
+	<rule ref="WordPress.XSS.EscapeOutput">
+		<properties>
+			<!-- e.g. body_class, the_content, the_excerpt -->
+			<property name="customAutoEscapedFunctions" type="array" value=""/>
+			<!-- e.g. esc_attr, esc_html, esc_url-->
+			<property name="customSanitizingFunctions" type="array" value=""/>
+			<!-- e.g. _deprecated_argument, printf, _e-->
+			<property name="customPrintingFunctions" type="array" value=""/>
+		</properties>
+	</rule>
+
 	<rule ref="WordPress.CSRF.NonceVerification" />
 	<rule ref="WordPress.PHP.DiscouragedFunctions"/>
 	<rule ref="WordPress.WP.EnqueuedResources"/>
