@@ -81,7 +81,7 @@
 	<rule ref="WordPress.XSS.EscapeOutput">
 		<properties>
 			<!-- e.g. body_class, the_content, the_excerpt -->
-			<property name="customAutoEscapedFunctions" type="array" value="woocommerce_wp_select,wcs_date_input"/>
+			<property name="customAutoEscapedFunctions" type="array" value="woocommerce_wp_select"/>
 			<!-- e.g. esc_attr, esc_html, esc_url-->
 			<property name="customSanitizingFunctions" type="array" value=""/>
 			<!-- e.g. _deprecated_argument, printf, _e-->
