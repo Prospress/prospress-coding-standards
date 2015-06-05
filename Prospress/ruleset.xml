@@ -79,6 +79,8 @@
 	<rule ref="WordPress.PHP.YodaConditions"/>
 
 	<rule ref="WordPress.XSS.EscapeOutput">
+		<!-- ignore wcs plain text email templates - strip_tags is run over the output amongst other things -->
+		<exclude-pattern>*/templates/emails/plain/*</exclude-pattern>
 		<properties>
 			<!-- e.g. body_class, the_content, the_excerpt -->
 			<property name="customAutoEscapedFunctions" type="array" value="woocommerce_wp_select"/>
