@@ -92,7 +92,7 @@
 			<!-- e.g. body_class, the_content, the_excerpt -->
 			<property name="customAutoEscapedFunctions" type="array" value="0=>woocommerce_wp_select,1=>wcs_help_tip"/>
 			<!-- e.g. esc_attr, esc_html, esc_url-->
-			<property name="customSanitizingFunctions" type="array" value="wcs_json_encode"/>
+			<property name="customEscapingFunctions" type="array" value="wcs_json_encode"/>
 			<!-- e.g. _deprecated_argument, printf, _e-->
 			<property name="customPrintingFunctions" type="array" value=""/>
 		</properties>
