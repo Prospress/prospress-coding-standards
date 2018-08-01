@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Prospress-WC">
+	<description>Prospress WooCommerce Coding Standards</description>
+
+	<!-- Include the main Prospress standard -->
+	<rule ref="Prospress"/>
+
+	<!-- Modify the behavior of the checks for escaping functions -->
+	<rule ref="WordPress.Security.EscapeOutput">
+		<!-- ignore wcs plain text email templates - strip_tags is run over the output amongst other things -->
+		<exclude-pattern>*/templates/emails/plain/*</exclude-pattern>
+		<properties>
+			<!-- e.g. body_class, the_content, the_excerpt -->
+			<property name="customAutoEscapedFunctions" type="array" value="woocommerce_wp_select,wcs_help_tip"/>
+			<!-- e.g. esc_attr, esc_html, esc_url-->
+			<property name="customEscapingFunctions" type="array" value="wcs_json_encode,htmlspecialchars,wp_kses_allow_underscores"/>
+		</properties>
+	</rule>
+</ruleset>
