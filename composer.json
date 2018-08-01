@@ -1,0 +1,10 @@
+{
+    "name": "prospress/prospress-coding-standards",
+    "description": "Coding standards for Prospress plugins.",
+    "type": "phpcodesniffer-standard",
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4",
+        "wp-coding-standards/wpcs": "^1.0"
+    },
+    "license": "MIT"
+}
