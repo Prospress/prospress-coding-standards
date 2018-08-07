@@ -11,9 +11,16 @@
 		<exclude-pattern>*/templates/emails/plain/*</exclude-pattern>
 		<properties>
 			<!-- e.g. body_class, the_content, the_excerpt -->
-			<property name="customAutoEscapedFunctions" type="array" value="woocommerce_wp_select,wcs_help_tip"/>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="woocommerce_wp_select"/>
+				<element value="wcs_help_tip"/>
+			</property>
 			<!-- e.g. esc_attr, esc_html, esc_url-->
-			<property name="customEscapingFunctions" type="array" value="wcs_json_encode,htmlspecialchars,wp_kses_allow_underscores"/>
+			<property name="customEscapingFunctions" type="array">
+				<element value="wcs_json_encode"/>
+				<element value="htmlspecialchars"/>
+				<element value="wp_kses_allow_underscores"/>
+			</property>
 		</properties>
 	</rule>
 </ruleset>
